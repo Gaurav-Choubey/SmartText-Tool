@@ -28,15 +28,15 @@ export default function Textform(props) {
 
         
     }
-        const handlecopy = ()=>{
-        console.log("Lowercase was clicked " + text);
-        var text = document.getElementById("mybox");
-        text.select();
-        navigator.clipboard.writeText(text.value)
-        document.getSelection().removeAllRanges();
-         props.showAlert("Texted copied!","success");
-     
-    }
+     const handlecopy = () => {
+    var text = document.getElementById("mybox");
+    console.log("Lowercase was clicked " + text.value);
+    text.select();
+    navigator.clipboard.writeText(text.value);
+    document.getSelection().removeAllRanges();
+    props.showAlert("Text copied!", "success");
+}
+
 
     const handleonchange =(event)=>{
         // console.log("on change");
